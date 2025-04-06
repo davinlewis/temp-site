@@ -2105,7 +2105,45 @@ input, select, textarea {
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
+		.inner .icons {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;  /* allow icons to wrap */
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		
+		.inner .icons li {
+			margin: 0 10px;
+		}
+		
+		/* Optionally, adjust icon sizing on smaller screens */
+		@media screen and (max-width: 480px) {
+			.inner .icons li a {
+				font-size: 24px;  /* or whatever size fits best */
+			}
+		}
 
+		.inner .icons {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;  /* allow icons to wrap */
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		
+		.inner .icons li {
+			margin: 0 10px;
+		}
+		
+		/* Optionally, adjust icon sizing on smaller screens */
+		@media screen and (max-width: 480px) {
+			.inner .icons li a {
+				font-size: 24px;  /* or whatever size fits best */
+			}
+		}
 /* Image */
 
 	.image {
@@ -2716,14 +2754,21 @@ input, select, textarea {
 
 /* Footer */
 
-	#footer .icons {
-		font-size: 3em;;
-		margin: 4em 0 0 0;
-	}
+#footer .icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* adds space between items */
+    margin: 4em 0 0 0;
+    font-size: 3em;
+	color: rgba(255, 255, 255, 0.4);
+}
 
-		#footer .icons a {
-			color: rgba(255, 255, 255, 0.4);
-		}
+@media screen and (max-width: 480px) {
+	#footer .icons {
+	   font-size: 2em;
+	}
+ }
 
 	#footer .copyright {
 		color: rgba(255, 255, 255, 0.4);
